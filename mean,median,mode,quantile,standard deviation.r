@@ -6,3 +6,4 @@ mode_age
 range(age)
 quantile(age,.25)
 quantile(age,.75)
+sd(age)
