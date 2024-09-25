@@ -1,0 +1,22 @@
+% Database of teachers with their codes
+teacher(t1, 'Mr. Smith').
+teacher(t2, 'Ms. Johnson').
+teacher(t3, 'Dr. Brown').
+
+% Database of subjects with their codes
+subject(sub1, 'Mathematics').
+subject(sub2, 'Physics').
+subject(sub3, 'Computer Science').
+subject(sub4, 'History').
+
+% Database linking teachers to subjects they teach
+teaches(t1, sub1).  % Mr. Smith teaches Mathematics
+teaches(t1, sub2).  % Mr. Smith teaches Physics
+teaches(t2, sub3).  % Ms. Johnson teaches Computer Science
+teaches(t3, sub4).  % Dr. Brown teaches History
+
+% Rule to retrieve the subjects taught by a specific teacher
+subjects_by_teacher(TeacherName, SubjectName) :-
+    teacher(TeacherCode, TeacherName),
+    teaches(TeacherCode, SubjectCode),
+    subject(SubjectCode, SubjectName).

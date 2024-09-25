@@ -1,0 +1,10 @@
+% Database of individuals with their names and dates of birth
+dob(john, date(1990, 5, 12)).
+dob(mary, date(1985, 3, 22)).
+dob(alex, date(1992, 11, 30)).
+dob(susan, date(2000, 7, 18)).
+
+get_dob(Name, DOB) :-
+    dob(Name, DOB).
+
+
